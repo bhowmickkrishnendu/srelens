@@ -30,3 +30,4 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - run: cargo test -p srelens-desktop --lib audit_export
+      - run: cargo test --workspace
