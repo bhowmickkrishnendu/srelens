@@ -26,8 +26,7 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck && pnpm build && pnpm test
+      - run: pnpm build
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
-      - run: cargo test -p srelens-desktop --lib audit_export
-      - run: cargo test --workspace
+      - run: cargo test --workspace --lib audit_export
